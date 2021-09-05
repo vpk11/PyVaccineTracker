@@ -71,6 +71,9 @@ https://api.telegram.org/bot<YourBOTToken>/getUpdates
 
 - This is your telegram_chat_id. - Copy that and pase it in your `telegram_chat_id` in constants.py
 
+## Use Case
+- Do you have an unused Raspberry Pi? Then it is great, go ahead and set-up a cron job of desired interval to get notified.
+
 
 ## Team🚀
 > Our Contributors
