@@ -30,7 +30,7 @@ pip install -r requirements.txt
 mv utils/constants_examples.py utils/constants.py
 ```
 
-- Replace `bot_url` and `telegram_chat_id` with your `bot_url` and `telegram_chat_id`. 
+- Replace `bot_url` and `telegram_chat_id` in `constants.py` with your `bot_url` and `telegram_chat_id`. 
 
 - Dont know how to create a bot and get chat id? No problem... [Click here](#telegram-bot)
 
