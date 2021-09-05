@@ -44,7 +44,7 @@ python3 main.py
 
 ---
 
-## Telegram Bot
+## Telegram Bot🚀
 
 ### Creating a bot
 - Use telegrams `BotFather` for creating Telegram Bots. Search `@BotFather`
@@ -71,9 +71,12 @@ https://api.telegram.org/bot<YourBOTToken>/getUpdates
 
 - This is your telegram_chat_id. - Copy that and pase it in your `telegram_chat_id` in constants.py
 
-## Use Case
+---
+
+## Use Case🚀
 - Do you have an unused Raspberry Pi? Then it is great, go ahead and set-up a cron job of desired interval to get notified.
 
+---
 
 ## Team🚀
 > Our Contributors
@@ -81,6 +84,8 @@ https://api.telegram.org/bot<YourBOTToken>/getUpdates
 <!-- prettier-ignore -->
 | [<img src="https://avatars0.githubusercontent.com/u/16625110?s=200&u=5c59d8d73ba6850e98333d0149dc84a6fc196b14&v=3" width="75px;"/><br /><sub><b>👨‍💻vpk11👨‍💻</b></sub>](https://wwww.github.com/vpk11)<br /> |
 | :---: |
+
+---
 
 ## References🚀
  - Cowin Public API: https://apisetu.gov.in/public/api/cowin
