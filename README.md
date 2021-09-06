@@ -1,5 +1,5 @@
 # COVID VACCINE TRACKER 🇮🇳
-> Python script to check vaccine availability and publish the result to a Telegram group
+> Python app to check vaccine availability and publish the result to a Telegram group
 
 ---
 
@@ -32,7 +32,7 @@ mv utils/constants_examples.py utils/constants.py
 
 - Replace `bot_url` and `telegram_chat_id` in `constants.py` with your `bot_url` and `telegram_chat_id`. 
 
-- Dont know how to create a bot and get chat id? No problem... [Click here](#telegram-bot)
+- Don't know how to create a bot and get chat id? No problem... [Click here](#telegram-bot)
 
 
 - Finally! Run the script!
@@ -67,7 +67,7 @@ https://api.telegram.org/bot<YourBOTToken>/getUpdates
 
 - Note: The api call returns empty if there are no chat history in the group.
 
-- If updates present there will be a `chat` key and with `id` present in its value.
+- If updates are present there will be a `chat` key with `id` present in its value.
 
 - This is your telegram_chat_id. - Copy that and pase it in your `telegram_chat_id` in constants.py
 
