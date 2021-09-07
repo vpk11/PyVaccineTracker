@@ -25,15 +25,18 @@
 pip install -r requirements.txt
 ```
 
-- Rename `constants_example.py` to `constants.py`
+- Create `.env` file in the project root folder
 ```shell
-mv utils/constants_examples.py utils/constants.py
+touch .env
 ```
 
-- Replace `bot_url` and `telegram_chat_id` in `constants.py` with your `bot_url` and `telegram_chat_id`. 
+- Add the following as environtment variables in the `.env` file just created
+```shell
+TELEGRAM_CHAT_ID=REPLACE-YOUR-TELEGRAM-CHAT-ID-HERE
+BOT_URL=REPLACE-YOUR-BOT-URL-HERE
+```
 
 - Don't know how to create a bot and get chat id? No problem... [Click here](#telegram-bot)
-
 
 - Finally! Run the script!
 ```shell

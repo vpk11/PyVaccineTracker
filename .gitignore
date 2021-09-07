@@ -125,4 +125,4 @@ venv.bak/
 dmypy.json
 
 # Dont Commit constants.py file
-/utils/constants.py
+.env
