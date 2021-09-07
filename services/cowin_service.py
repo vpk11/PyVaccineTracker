@@ -17,7 +17,7 @@ class CowinService(object):
             messages = resolve_find_by_pin_tg_messages(data)
             telegram = Telegram()
             if not messages:
-                telegram.publish(f"*{date}*: No Slots Availbale")
+                telegram.publish(f"*Date*: {date}\n*Pincode*: {self.pin_code}\nNo Slots Availbale")
             else:
                 for message in messages:
                     telegram.publish(message)
