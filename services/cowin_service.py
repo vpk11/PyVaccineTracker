@@ -1,3 +1,4 @@
+import time
 from services.telegram_service import TelegramSerivce as Telegram
 from services.api_services.cowin_api_service import CowinApiService
 from datetime import datetime, timedelta
@@ -21,5 +22,5 @@ class CowinService(object):
             else:
                 for message in messages:
                     telegram.publish(message)
-
+        time.sleep(10)
         return True
