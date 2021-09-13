@@ -17,3 +17,14 @@ class CowinApiService(Base):
         except Exception as e:
             print(f"Exception: {e}")
             return self.handle_error(e)
+
+    def calendar_by_district(self, district_id, date):
+        try:
+            url = constants.calendar_by_district_url.format(district_id, date)
+            response = requests.get(url)
+            json_data = response.json()
+            print(f"Json data:find_by_pin -> {json_data}")
+            return response_parser(json_data)
+        except Exception as e:
+            print(f"Exception: {e}")
+            return self.handle_error(e)

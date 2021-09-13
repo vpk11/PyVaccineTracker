@@ -1,6 +1,5 @@
 from models.session import Session
-from datetime import datetime, timedelta
-import utils.constants as constants
+from models.center import Center
 
 def response_parser(response):
     sessions = []
@@ -34,16 +33,39 @@ def response_parser(response):
         sessions.append(session)
     return { 'sessions': sessions, 'error': None }
 
-def resolve_find_by_pin_urls(pincode):
-    print(f"resolve_urls: {pincode}")
-    cowin_urls = []
-    today = datetime.today().strftime("%d-%m-%Y")
-    tommorow = (datetime.today() + timedelta(days=1)).strftime("%d-%m-%Y")
-    day_after_tommorrow = (datetime.today() + timedelta(days=2)).strftime("%d-%m-%Y")
-    for day in [today, tommorow, day_after_tommorrow]:
-        cowin_urls.append(constants.base_url.format(pincode, day))
+def calendar_by_district_response_parser(response):
+    centers = []
+    if not response.get('centers'): return { 'centers': centers }
 
-    return cowin_urls
+    for c in response.get('centers'):
+        center = Center(
+            center_id=c.get('center_id'),
+            name=c.get('name'),
+            address=c.get('address'),
+            state_name=c.get('state_name'),
+            district_name=c.get('district_name'),
+            block_name=c.get('block_name'),
+            pincode=c.get('pincode'),
+            from_time=c.get('from_time'),
+            to_time=c.get('to_time'),
+            lat=c.get('lat'),
+            long=c.get('long'),
+            fee_type=c.get('fee_type')
+        )
+        for s in c.get('sessions'):
+            session = Session(
+                session_id=s.session_id,
+                date=s.get('date'),
+                available_capacity=s.get('available_capacity'),
+                available_capacity_dose1=s.get('available_capacity_dose1'),
+                available_capacity_dose2=s.get('available_capacity_dose2'),
+                fee=s.get('fee'),
+                min_age_limit=s.get('min_age_limit'),
+                allow_all_age=s.get('allow_all_age'),
+                vaccine=s.get('vaccine'),
+                slots=s.get('slots'),
+            )
+
 
 def resolve_find_by_pin_tg_messages(data):
     messages = []
