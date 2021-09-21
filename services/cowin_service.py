@@ -3,6 +3,7 @@ from services.telegram_service import TelegramSerivce as Telegram
 from services.api_services.cowin_api_service import CowinApiService
 from datetime import datetime, timedelta
 from utils.helper_methods import resolve_find_by_pin_tg_messages
+import utils.constants as constants
 
 class CowinService(object):
     def __init__(self, pin_code):
@@ -22,5 +23,5 @@ class CowinService(object):
             else:
                 for message in messages:
                     telegram.publish(message)
-        time.sleep(10)
+        time.sleep(constants.sleep_time)
         return True

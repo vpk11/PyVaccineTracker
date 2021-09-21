@@ -9,4 +9,5 @@ find_by_pincode_url = base_url + '/api/v2/appointment/sessions/public/findByPin?
 bot_url = os.environ['BOT_URL']
 telegram_chat_id = os.environ['TELEGRAM_CHAT_ID']
 parse_mode="Markdown"
-pin_codes = [671531, 671532, 671541]
+pin_codes = [671532, 671541, 671542]
+sleep_time = 10
